@@ -1,3 +1,21 @@
+#Tydzień 4
+
+Rozbuduj swoją aplikacje z poprzedniego tygodnia o interfejs graficzny, który umożliwi:
+
+wyświetlanie wszystkich pozycji
+
+pobieranie elementu po jego id
+
+dodawanie pozycji
+
+modyfikowanie pozycji
+
+modyfikowanie jednego z pól pozycji
+
+usuwania jednej pozycji
+
+Do działania wymagany projekt z trzeciego tygodnia
+
 # CarFrontend3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.

@@ -1,0 +1,39 @@
+<h3>Find Cars by color</h3>
+<div [hidden]="found" style="width: 400px;">
+  <div class="form-group">
+    <label for="color">Enter the color</label>
+    <input type="text" class="form-control" id="carColor" required name="carColor" [(ngModel)]="carColor">
+  </div>
+
+
+  <button class="btn btn-success" (click)="onFind()">Find</button>
+
+
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Mark</th>
+        <th>Model</th>
+        <th>Color</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let car of filteredCars | async">
+        <td>{{car.id}}</td>
+        <td>{{car.mark}}</td>
+        <td>{{car.model}}</td>
+        <td>{{car.color}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div [hidden]="!found">
+    <h4>You submitted successfully!</h4>
+  </div>
+
+  <button (click)="list()" class="btn btn-primary">Back to Car List</button>
+  <br>
+</div>

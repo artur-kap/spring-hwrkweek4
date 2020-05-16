@@ -1,0 +1,29 @@
+<h3>Find Car by id</h3>
+<div [hidden]="found" style="width: 400px;">
+  <div class="form-group">
+    <label for="id">Enter the Id</label>
+    <input type="text" class="form-control" id="carId" required name="carId" [(ngModel)]="carId">
+  </div>
+
+
+  <button class="btn btn-success" (click)="onFind()">Find</button>
+
+  <hr/>
+  <div *ngIf="car">
+    <div>
+      <label><b>Mark: </b></label> {{car.mark}}
+    </div>
+    <div>
+      <label><b>Model: </b></label> {{car.model}}
+    </div>
+    <div>
+      <label><b>Color: </b></label> {{car.color}}
+    </div>
+  </div>
+  <div *ngIf="isError">
+      There is no Car with such id !
+  </div>
+  <br>
+  <button (click)="list()" class="btn btn-primary">Back to Car List</button>
+  <br>
+</div>
